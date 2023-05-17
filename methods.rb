@@ -6,13 +6,15 @@ def greet (name)
   puts "Hello, #{name}!"
 end
 
+def greet_with_default(name = "programmer")
+  puts "Hello, #{name}!"
+end
+
 def add (num1, num2)
-  return num1 + num2
+  num1 + num2
 end
 
 def halve(num)
-  if not isinstance(num, int)
-    return Nil
-  return num / 2
-end
+  return num / 2 if num.is_a?(Integer)
+  nil
 end
